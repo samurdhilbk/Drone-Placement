@@ -37,7 +37,7 @@ Here TruncatedNormal is the Truncated Normal Distribution (https://en.wikipedia.
 1. When **sigma=0**, **TruncatedNormal(mean=0.5, variance=0, min=0, max=1)=0.5** and hence the rectangle will always be split in half.
 2. When **sigma -> infinity**, **TruncatedNormal** approaches a uniform distribution and there will be randomness in the splitting location.
 
-**sigma=0** packs the circles tighter and has less randomness while **sigma -> infinity** packs the circles looser and has higher randomness. So to achieve the maximum possible randomness we choose the maximum that allows to all circles inside. This is done by using binary search.
+**sigma=0** packs the circles tighter and has less randomness while **sigma -> infinity** packs the circles looser and has higher randomness. So to achieve the maximum possible randomness we choose the maximum **sigma** that allows to place all circles inside. This is done by using binary search.
 
 ## Using the code
 
