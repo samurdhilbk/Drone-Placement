@@ -138,19 +138,17 @@ vector<Rect> split_to_rects_helper(int N, ld r, ld L, ld sigma){
 
     ld d = 2*r;
 
-    int k = (int)floor(L/d);
-
-    if(N> k*k) return empty_vec;
-
     Rect init;
     init.x = 0;
     init.y = 0;
     init.dx = L;
     init.dy = L;
 
-    int total_rect = 0;
-
+    //maximum priority queue to hold rects that could further be split
+    //Larger rectangles will be split first
     priority_queue<Rect, std::vector<Rect>, rect_compare> curr_eligible;
+
+    //vector to hold rects that cannot be split further
     vector<Rect> curr_ineligible;
 
     if(can_split(init, d)){
