@@ -20,7 +20,9 @@ If a valid placement can be found, the coordinates of the center of each drone. 
 	1. Split it along width or height depending on whether **w>=2r** or **h>=2r**. If both **w>=2r** and **h>=2r**, randomly select the dimension to split along.
 	1. Select the splitting point randomly (see below for details)
 	1. Splt and repeat with steps 1-3
+	
 <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
+
 2. If less than **N** rectangles were found, then a valid solution does not exist.
 3. If **N** rectangles were found, place a circle in each rectangle randomly. Since we ensured that each rectangle satisfied this can always be done.
 
