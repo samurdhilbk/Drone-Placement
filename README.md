@@ -41,13 +41,13 @@ Here **TruncatedNormal** is the Truncated Normal Distribution (https://en.wikipe
 
 ## Using the code
 
-Since standard C++ libraries do not include the capability to calculate **TruncatedNormal**, we use a libary developed by researchers at https://people.sc.fsu.edu/~jburkardt/cpp_src/truncated_normal/truncated_normal.html. This is reflected by `truncated_normal.cpp` and `truncated_normal.h`, and is the only dependency other than the standard  C++ libary.
+Since standard C++ libraries do not include the capability to calculate **TruncatedNormal**, we use a library developed by researchers at https://people.sc.fsu.edu/~jburkardt/cpp_src/truncated_normal/truncated_normal.html. This is reflected by `truncated_normal.cpp` and `truncated_normal.h`, and is the only dependency other than the standard  C++ library.
 
 The included CMAKE file could be helpful to compile the program.
 
 ### Setting parameters
 
-Values for **N**,  **r** and **L** can be set in the `main()` as indicated function. 
+Values for **N**,  **r** and **L** can be set as indicated in the `main()` function. 
 
 ### Parsing output
 
