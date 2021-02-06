@@ -20,9 +20,7 @@ If a valid placement can be found, the coordinates of the center of each drone. 
 	1. Split it along width or height depending on whether **w>=2r** or **h>=2r**. If both **w>=2r** and **h>=2r**, randomly select the dimension to split along.
 	1. Select the splitting point randomly (see below for details)
 	1. Splt and repeat with steps 1-3
-	
-	![sdfsd](https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png  = 250x250)
-	
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
 2. If less than **N** rectangles were found, then a valid solution does not exist.
 3. If **N** rectangles were found, place a circle in each rectangle randomly. Since we ensured that each rectangle satisfied this can always be done.
 
@@ -52,3 +50,21 @@ Values for **N**,  **r** and **L** can be set in the `main()` as indicated funct
 ### Parsing output
 
 Output of the program can be printed to the console or be written to files, as controlled by in the main() function. The output files can be parsed by using the included Jupyter notebook `visualize_results.ipynb` to visualize the results.
+
+## Visualization of Results
+
+
+
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_200.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/circles_only_200.png" width="200">
+
+**L=200, r=1, N=1000 (run 1)**
+
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_200_1.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/circles_only_200_1.png" width="200">
+
+**L=200, r=1, N=1000 (run 2)**
+
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
+
+**L=8, r=2, N=10 (run 1)**
+
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only_1.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_1.png" width="200">
