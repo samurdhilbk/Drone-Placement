@@ -41,7 +41,7 @@ Here **TruncatedNormal** is the Truncated Normal Distribution (https://en.wikipe
 
 ## Using the code
 
-Since standard C++ libraries do not include the capability to calculate , we use a libary developed by researchers at https://people.sc.fsu.edu/~jburkardt/cpp_src/truncated_normal/truncated_normal.html. This is reflected by `truncated_normal.cpp` and `truncated_normal.h`, and is the only dependency other than the standard  C++ libary.
+Since standard C++ libraries do not include the capability to calculate **TruncatedNormal**, we use a libary developed by researchers at https://people.sc.fsu.edu/~jburkardt/cpp_src/truncated_normal/truncated_normal.html. This is reflected by `truncated_normal.cpp` and `truncated_normal.h`, and is the only dependency other than the standard  C++ libary.
 
 The included CMAKE file could be helpful to compile the program.
 
@@ -51,7 +51,7 @@ Values for **N**,  **r** and **L** can be set in the `main()` as indicated funct
 
 ### Parsing output
 
-Output of the program can be printed to the console or be written to files, as controlled by in the main() function. The output files can be parsed by using the included Jupyter notebook `visualize_results.ipynb` to visualize the results.
+Output of the program can be printed to the console or be written to files, as controlled by in the `main()` function. The output files can be parsed by using the included Jupyter notebook `visualize_results.ipynb` to visualize the results.
 
 ## Visualization of Results
 
