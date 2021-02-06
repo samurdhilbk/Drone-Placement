@@ -15,7 +15,7 @@ If a valid placement can be found, the coordinates of the center of each drone. 
 
 ## Solution
 
-1. Partition the ** L x L ** square into **N** non-overlapping rectangles where the width **w** and height **h** of each rectangle satisfies **max(w, h)>=2r**. To do this:
+1. Partition the **L x L** square into **N** non-overlapping rectangles where the width **w** and height **h** of each rectangle satisfies **max(w, h)>=2r**. To do this:
 	1. Pick a one of the remaining rectangels satisfying **w>=2r** and/or **h>=2r**
 	1. Split it along width or height depending on whether **w>=2r** or **h>=2r**. If both **w>=2r** and **h>=2r**, randomly select the dimension to split along.
 	1. Select the splitting point randomly (see below for details)
@@ -35,3 +35,17 @@ Here TruncatedNormal is the Truncated Normal Distribution (https://en.wikipedia.
 2. When **sigma -> infinity**, **TruncatedNormal** approaches a uniform distribution and there will be randomness in the splitting location.
 
 **sigma=0** packs the circles tighter and has less randomness while **sigma -> infinity** packs the circles looser and has higher randomness. So to achieve the maximum possible randomness we choose the maximum that allows to all circles inside. This is done by using binary search.
+
+## Using the code
+
+Since standard C++ libraries do not include the capability to calculate , we use a libary developed by researchers at https://people.sc.fsu.edu/~jburkardt/cpp_src/truncated_normal/truncated_normal.html. This is reflected by `truncated_normal.cpp` and `truncated_normal.h`, and is the only dependency other than the standard  C++ libary.
+
+The included CMAKE file could be helpful to compile the program.
+
+### Setting parameters
+
+Values for **N**,  **r** and **L** can be set in the `main()` as indicated function. 
+
+### Parsing output
+
+Output of the program can be printed to the console or be written to files, as controlled by in the main() function. The output files can be parsed by using the included Jupyter notebook `visualize_results.ipynb` to visualize the results.
