@@ -16,18 +16,18 @@ If a valid placement can be found, the coordinates of the center of each drone. 
 ## Solution
 
 1. Let **D=2r** (diameter). Partition the **L x L** square into **N** non-overlapping rectangles where the width **w** and height **h** of each rectangle satisfies **min(w, h)>=D**. Any such rectangle has the ability to hold a single circle. To do this, start with the **L x L** square as the only rectangle. At each iteration of the algorithm:
-	1. Pick one of the remaining rectangels satisfying **w>=2D** and/or **h>=2D**. Such a rectangle can be split into two rectangles each satisfying **min(w, h)>=D**.
+	1. Pick one of the remaining rectangels satisfying **w>=2D** and/or **h>=2D**. Such a rectangle can be split into two rectangles each satisfying **min(w, h)>=D**. If none of the remaining rectangles satisfy this condition, terminate and go to Step 2.
 	1. Split it along width or height, depending on whether **w>=2D** or **h>=2D**. If both **w>=2D** and **h>=2D**, randomly select the dimension to split along.
 	1. Select the splitting point randomly (see below for details).
 	1. Split the rectangle at the chosen splitting point. Now we have one more valid rectangle in our set.
-	1. Repeat with steps 1-4.
+	1. Repeat with steps i-iv.
 	
-<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
+	<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
 
 2. If less than **N** rectangles were found, then a valid solution does not exist.
 3. If **N** rectangles were found, place a circle in each rectangle randomly. Since we ensured that each rectangle satisfied **min(w, h)>=D**, this can always be done.
 
-### Selecting a splitting point (Step 3 of solution outline)
+### Selecting a splitting point (Step 1.iii. of solution outline)
 
 Assume that the selected dimension to split a rectangle along has length **p** where **p>=2D**. The splitting point **q** is found as
 
