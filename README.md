@@ -56,24 +56,28 @@ Output of the program can be printed to the console or be written to files, as c
 
 ## Visualization of Results
 
-### **L=200, r=1, N=1000**
+### **L=200, r=2, N=1000**
 -------------
 
 <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_200.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/circles_only_200.png" width="200">
 
-**L=200, r=1, N=1000 (run 1)**
+**L=200, r=2, N=1000 (run 1)**
 
 <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_200_1.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/circles_only_200_1.png" width="200">
 
-**L=200, r=1, N=1000 (run 2)**
+**L=200, r=2, N=1000 (run 2)**
 
-### **L=8, r=2, N=10**
+### **L=8, r=1, N=10**
 -------------
 
 <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles.png" width="200">
 
-**L=8, r=2, N=10 (run 1)**
+**L=8, r=1, N=10 (run 1)**
 
 <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_only_1.png" width="200"> <img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_plus_circles_1.png" width="200">
 
-**L=8, r=2, N=10 (run 2)**
+**L=8, r=1, N=10 (run 2)**
+
+### **L=8, r=1, N=16**
+-------------
+<img src="https://github.com/samurdhilbk/Drone-Placement/raw/master/plots/grid_and_circles_16.png" width="200">
